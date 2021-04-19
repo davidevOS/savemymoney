@@ -28,24 +28,35 @@
         </div>
     </header>
     <section class="grid">
+        <div id="message" class="msg animate slide-in-down"></div>
         <div id="title">
             <h1>Monthly Summary</h1>
             <p class="subtitle">Get a summary of your monthly online transactions here</p>
         </div>
         <div id="addTransaction">
             <span class="section_title">Add a Transaction</span>
-            <div class="card grid_transaction">
+            <div class="card grid_transaction form_transaction">
                 <div id="name" class="inputblock">
-                    <label for="transaction_name">Note</label>
+                    <label for="transaction_name">Name</label>
                     <input type="text" name="Name" id="transaction_name">
                 </div>
                 <div id="category" class="inputblock">
                     <label for="transaction_category">Category</label>
-                    <select name="category">
-                        <option value=""></option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Shopping">Shopping</option>
-                        <option value="Travels">Travels</option>
+                    <select name="category" id="transaction_category">
+                        <option value="">Select a Category</option>
+                        <optgroup label="Income">
+                            <option value="Salary">Salary</option>
+                            <option value="Bonus">Bonus</option>
+                            <option value="Other">Other</option>
+                        </optgroup>
+                        <optgroup label="Expenditure">
+                            <option value="Utilities">Utilities</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Travels">Travels</option>
+                            <option value="Other">Other</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div id="date" class="inputblock">
@@ -57,8 +68,8 @@
                     <input type="number" name="Amount" id="transaction_amount">
                 </div>
                 <div id="transaction_btn" class="addTransaction__btn">
-                    <button class="btn addTransaction__btn--expenditure">Expenditure</button>
-                    <button class="btn addTransaction__btn--income">Income</button>
+                    <button class="add__btn addTransaction__btn--expenditure" id="expenditure" value="expenditure">Expenditure</button>
+                    <button class="add__btn addTransaction__btn--income" id="income" value="income">Income</button>
                 </div>
             </div>
 
@@ -66,14 +77,14 @@
         <div id="totalIncome">
             <span class="section_title">Total Income</span>
             <div class="card totals">
-                <span class="total__title--income"> $ 1,500.50</span>
+                <span id="total_income" class="total__title--income"> $ 0</span>
             </div>
         </div>
         <div id="totalExpenditure">
             <span class="section_title">Total Expenditure</span>
             <div class="card totals">
 
-                <span class="total__title--expenditure"> $ 1,500.50</span>
+                <span id="total_expenditure" class="total__title--expenditure"> $ 0</span>
             </div>
         </div>
         <div id="transactions">
@@ -81,28 +92,28 @@
                 <span class="section_title">Monthly Transaction History</span>
                 <div class="section_table">
                     <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        <tr>
-                            <td class="table_name">Transaction Name</td>
-                            <td>Transaction Category</td>
-                            <td>14 April 2021</td>
-                            <td class="table_amount">$.500</td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Name</th>
+                                <th>Category</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div id="categories">
-            <div class="card ">
-                <span class="section_title">Outcome Statistics</span>
-            </div>
+        <div id="categories">      
+            <span class="section_title">Category Statistics</span>
+            
         </div>
     </section>
+    <footer>
+        From <span><a href="https://platzi.com/blog/conoce-que-es-platzi-master/" target="_blank">Platzi Master</a></span> with ❤️ by <span><a href="https://github.com/iqrivas" target="_blank">Denisse</a></span> and <span><a href="https://github.com/davidevOS" target="_blank">David</a></span>
+    </footer>
     <!-- Firebase -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
