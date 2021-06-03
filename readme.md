@@ -32,9 +32,13 @@ Here you can find the app demo: https://savemymoney.vercel.app/
 ![Diagram for adding or deleting transactions](diagrams/diagram_transactions.svg)
 
 
+## Coach 
+
+Ana Belisa Martínez
+
 ## Made with ❤️ By:
 
 [Denisse Rivas](https://github.com/iqrivas) | 
-[David Galeano](https://github.com/davidevOS) 
+Slack: [David Galeano [C7] ](https://github.com/davidevOS) |  Frontend
 
 
